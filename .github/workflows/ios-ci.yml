@@ -1,0 +1,37 @@
+name: iOS CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install CocoaPods
+        run: gem install cocoapods
+
+      - name: Setup project assets
+        run: ./setup.sh
+
+      - name: Build and test
+        env:
+          PISHT_RUN_INTEGRATION_TESTS: "0"
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -workspace Pisth.xcworkspace \
+            -scheme Pisth \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14' \
+            CODE_SIGNING_ALLOWED=NO

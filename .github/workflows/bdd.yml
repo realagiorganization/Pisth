@@ -1,0 +1,23 @@
+name: BDD Suite
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  bdd:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Record BDD run (VHS)
+        uses: charmbracelet/vhs-action@v2
+        with:
+          path: scripts/bdd.tape
+
+      - name: Upload BDD GIF
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-gif
+          path: docs/bdd.gif

@@ -1,0 +1,21 @@
+name: Pages Screenshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Capture GitHub Pages screenshot
+        run: ./scripts/screenshot-pages.sh https://pisth.github.io docs/gh-pages-screenshot.png
+
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: gh-pages-screenshot
+          path: docs/gh-pages-screenshot.png

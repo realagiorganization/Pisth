@@ -1,0 +1,5 @@
+app_identifier ENV.fetch("PISHT_APP_IDENTIFIER")
+apple_id ENV.fetch("PISHT_APPLE_ID")
+
+itc_team_id ENV["PISHT_ITC_TEAM_ID"]
+team_id ENV["PISHT_TEAM_ID"]

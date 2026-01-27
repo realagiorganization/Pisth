@@ -1,0 +1,38 @@
+name: TestFlight Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: macos-14
+    env:
+      PISHT_APP_IDENTIFIER: ${{ secrets.PISHT_APP_IDENTIFIER }}
+      PISHT_APPLE_ID: ${{ secrets.PISHT_APPLE_ID }}
+      PISHT_ITC_TEAM_ID: ${{ secrets.PISHT_ITC_TEAM_ID }}
+      PISHT_TEAM_ID: ${{ secrets.PISHT_TEAM_ID }}
+      MATCH_REPO_URL: ${{ secrets.MATCH_REPO_URL }}
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_CONTENT: ${{ secrets.APP_STORE_CONNECT_KEY_CONTENT }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install CocoaPods and Fastlane
+        run: gem install cocoapods fastlane
+
+      - name: Setup project assets
+        run: ./setup.sh
+
+      - name: Upload to TestFlight
+        run: fastlane beta

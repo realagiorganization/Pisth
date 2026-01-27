@@ -1,0 +1,14 @@
+Prompt ID: prompts_ios_app_pisth-p00031-3e74eb\nTimestamp: 2026-01-27T22:24:39.580681Z\nSource: discord\nQueue: a5f8c00da8a54b4095d0f78381075345::prompt_queue::discord_1353735964635435100_1353735964635435100_1462902553447633100_realagicorp_iosapp_prompts_ios_app_pisth_1462902553447633100_json\nRun: 1/1\nContent:\nDiscord channel: prompts_ios_app_pisth\nChannel ID: 1462902553447633100\nQueue label: prompts_ios_app_pisth\nMessages aggregated: 6\nAttachments saved for execution (4): attachments/image-2d3dc.png, attachments/image-4cc47.png, attachments/image-8bcf2.png, ... | mounted at .prompt_attachments/prompts_ios_app_pisth-p00031-3e74eb\nAttachment locations:\n- image-2d3dc.png (102973 bytes) -> .prompt_attachments/prompts_ios_app_pisth-p00031-3e74eb/image-2d3dc.png\n- image-4cc47.png (135570 bytes) -> .prompt_attachments/prompts_ios_app_pisth-p00031-3e74eb/image-4cc47.png\n- image-8bcf2.png (121795 bytes) -> .prompt_attachments/prompts_ios_app_pisth-p00031-3e74eb/image-8bcf2.png\n- image-9827a.png (96317 bytes) -> .prompt_attachments/prompts_ios_app_pisth-p00031-3e74eb/image-9827a.png\n\nDiscord channel: prompts_ios_app_pisth | ID: 1462902553447633100 | Reaction filter: :white_check_mark:
+
+Messages with required reaction:
+[1] (2026-01-19T20:12:38.668+00:00 | realagiadmin_29264 | id=1462902597533827092) work in https://github.com/realagiorganization/Pisth
+[2] (2026-01-19T20:12:52.375+00:00 | realagiadmin_29264 | id=1462902655025414288) Develop GitHub actions that build test and deploy release version of app to TestFlight, add GitHub actions badges
+[3] (2026-01-21T19:49:58.874+00:00 | realagiadmin_29264 | id=1463621669875875964) test/screenshot github pages website
+Attachments: image.png: /out/1353735964635435100/_media/image-4cc47.png ; image.png: /out/1353735964635435100/_media/image-2d3dc.png ; image.png: /out/1353735964635435100/_media/image-9827a.png ; image.png: /out/1353735964635435100/_media/image-8bcf2.png
+[4] (2026-01-22T08:25:50.353+00:00 | mermaid10121 | id=1463811887765524551) Add badges for each GitHub action to README and gif of ui testing
+[5] (2026-01-25T20:21:40.508+00:00 | realagiadmin_29264 | id=1465079197369241725) Create DEVPLAN.md outlining steps for developing this project, mention there all external dependencies that leverage parts of functionality needed
+
+Create BDD test suite describing principal use cases
+
+Create GitHub actions launching BDD suite and add its badge to README. If behavior includes either console or UI / Web user interaction, record it with vhs action and post gif into README
+[6] (2026-01-27T21:26:44.819+00:00 | drybox | id=1465820348967817472) always_on_hint\n
