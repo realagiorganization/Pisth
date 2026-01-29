@@ -7,6 +7,7 @@
 [![iOS CI](https://github.com/realagiorganization/Pisth/actions/workflows/ios-ci.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/ios-ci.yml)
 [![TestFlight Release](https://github.com/realagiorganization/Pisth/actions/workflows/ios-testflight.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/ios-testflight.yml)
 [![BDD Suite](https://github.com/realagiorganization/Pisth/actions/workflows/bdd.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/bdd.yml)
+[![LLM CLI BDD](https://github.com/realagiorganization/Pisth/actions/workflows/llm-cli-bdd.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/llm-cli-bdd.yml)
 [![Pages Screenshot](https://github.com/realagiorganization/Pisth/actions/workflows/pages-screenshot.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/pages-screenshot.yml)
 
 
@@ -37,6 +38,7 @@ Features:
 
 ## UI testing (BDD run)
 ![BDD Suite Run](docs/bdd.gif)
+![LLM CLI Run](docs/llm-cli.gif)
 
 # API
 

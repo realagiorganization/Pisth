@@ -1,0 +1,31 @@
+name: LLM CLI BDD
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  llm-cli-bdd:
+    if: ${{ secrets.LLM_API_KEY != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tmux
+        run: sudo apt-get update && sudo apt-get install -y tmux
+
+      - name: Record LLM CLI run (VHS)
+        uses: charmbracelet/vhs-action@v2
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        with:
+          path: scripts/llm_cli.tape
+
+      - name: Upload LLM CLI GIF
+        uses: actions/upload-artifact@v4
+        with:
+          name: llm-cli-gif
+          path: docs/llm-cli.gif
