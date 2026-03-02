@@ -43,6 +43,15 @@ class PisthTests: XCTestCase, NMSSHChannelDelegate {
     override func setUp() {
         continueAfterFailure = false
     }
+
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+
+        let shouldRun = ProcessInfo.processInfo.environment["PISHT_RUN_INTEGRATION_TESTS"] == "1"
+        if !shouldRun {
+            throw XCTSkip("Set PISHT_RUN_INTEGRATION_TESTS=1 to run network-dependent integration tests.")
+        }
+    }
     
     // MARK: - Channel delegate
     

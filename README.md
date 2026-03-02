@@ -4,6 +4,12 @@
 
 [![Download on the App Store](https://pisth.github.io/appstorebadge.svg)](https://itunes.apple.com/us/app/pisth/id1331070425?ls=1&mt=8)
 
+[![iOS CI](https://github.com/realagiorganization/Pisth/actions/workflows/ios-ci.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/ios-ci.yml)
+[![TestFlight Release](https://github.com/realagiorganization/Pisth/actions/workflows/ios-testflight.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/ios-testflight.yml)
+[![BDD Suite](https://github.com/realagiorganization/Pisth/actions/workflows/bdd.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/bdd.yml)
+[![LLM CLI BDD](https://github.com/realagiorganization/Pisth/actions/workflows/llm-cli-bdd.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/llm-cli-bdd.yml)
+[![Pages Screenshot](https://github.com/realagiorganization/Pisth/actions/workflows/pages-screenshot.yml/badge.svg)](https://github.com/realagiorganization/Pisth/actions/workflows/pages-screenshot.yml)
+
 
 ```
 Pisth is an SSH and SFTP client.
@@ -29,6 +35,10 @@ Features:
 
 ## Screenshots
 ![Screenshots](https://pisth.github.io/ios/screenshots.png)
+
+## UI testing (BDD run)
+![BDD Suite Run](docs/bdd.gif)
+![LLM CLI Run](docs/llm-cli.gif)
 
 # API
 
